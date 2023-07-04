@@ -35,4 +35,10 @@ class RegisterAccountRepositoryTest {
 
         assertEquals(registerAccount.getName(),"test1");
     }
+    @Test
+    public  void whenFindByName_thenReturnRegisterAccount(){
+        RegisterAccount registerAccount = registerAccountRepository.findAccountByName("test1").get();
+
+        assertEquals(registerAccount.getName(),"test1");
+    }
 }
