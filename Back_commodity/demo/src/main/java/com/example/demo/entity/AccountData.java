@@ -6,8 +6,16 @@ import jakarta.persistence.Table;
 import jakarta.persistence.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class AccountData {
     @Id
     @SequenceGenerator(name = "account_sequence",
@@ -29,8 +37,7 @@ public class AccountData {
     
 
 
-    public AccountData() {
-    }
+
 
     public AccountData(Long id, String goods, Double amount) {
         this.id = id;
